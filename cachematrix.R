@@ -1,7 +1,13 @@
 # Assignment :- Caching the inverse of a matrix
 
-## makeCacheMatrix - creates a special "matrix" object that caches the inverse of the matrix supplied
-## cacheSolve - checks to see if inverse of matrix supplied exists and if so returns it otherwise calculates the inverse
+## makeCacheMatrix - takes a matrix and creates a null "inverse" matrix, defines the matrix and the null inverse in the parent environment
+##  and returns a set of 4 functions associated with that matrix that can set, get, setinverse , getinverse of the matrix
+##  but doesnt actually calculate the inv matrix
+
+## cacheSolve - takes as input the matrix and assocated functions defined by using makeCacheMatrix(matrix)
+##  and checks to see if inverse of matrix supplied exists (through cacheSolve having being called before for this matrix)
+## if the inverse exitst then returns it otherwise calculates the inverse and caches it
+##   (thereby overriding the null inverse that was established by makeCacheMatrix)
 
 
 ### Steps for makeCacheMatrix are:
